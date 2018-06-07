@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Train Schedule</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+		
+		<!-- Latest compiled and minified Bootstrap CSS & JS Libraries -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+		<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">​
+
+	</head>
+	<body>
+		<div class="container" id="backgroundImage">
+			<div class="page-header bg-alert text-light">
+				<h1 class="text-center"><i class="fa fa-train" style="font-size:36px;"></i> Train Schedule</h1>
+				<h3 class="text-center">Locomotive Time Table</h3>
+			</div>
+			
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<!-- Current Trains -->
+				<div class="card">
+					<div class="card-heading">
+						<h3 class="card-title bg-primary" ><i class="fa fa-train" style="font-size:24px;"></i><strong> Current Train Schedule</strong></h3>
+					</div>
+					<div class="card-body">
+						<table class="table table-striped" id='trainTable'>
+							<thead>
+								<tr>
+									<th>Train Name</th>
+									<th>Destination</th>
+									<th>Frequency</th>
+									<th>Next Arrival</th>
+									<th>Minutes Away</th>
+								</tr>
+							</thead>
+							<tbody id="trainRows">
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<hr>
+				<!-- Add New Trains -->
+
+					<div class="card">
+						<div class="card-heading">
+							<h3 class="card-title bg-primary"><i class="fa fa-train" style="font-size:24px;"></i><strong> Add a New Train</strong></h3>
+						</div>
+
+						<div class="card-body">
+							<!-- Entry Form -->
+							<form>
+								<div class="form-group">
+									<label for="trainName">Train Name</label>
+									<input type="text" class="form-control" id="trainNameInput">
+								</div>
+
+								<div class="form-group">
+									<label for="destination">Destination</label>
+									<input type="text" class="form-control" id="destinationInput">
+								</div>
+
+								<div class="form-group">
+									<label for="starttime">First Train Time (HH:mm - military time)</label>
+									<input type="text" class="form-control" id="trainTimeInput">
+								</div>
+
+								<div class="form-group">
+									<label for="frequency">Frequency (min)</label>
+									<input type="text" class="form-control" id="frequencyInput">
+								</div>
+								
+								<button type="submit" class="btn btn-primary" id="addTrainBtn">Submit</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Javascript -->
+		<!-- Firebase Reference -->
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+		<!-- Moment.js Reference -->
+		<script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment.min.js" type="text/javascript"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="assets/javascript/apps.js"></script> 
+	</body>
+</html>
